@@ -12,15 +12,15 @@ const ProductSchema = new mongoose.Schema({
     dataSheet: String,
     quantity: { type: Number, default: 0 },
     media: [{ type: String }],
-    typeOf: [{ type: Number }], // checkbox chọn nhiều
-    width: Number, // cm
-    length: Number, // cm
-    recycle: String, // "Yes" / "No"
+    typeOf: [{ type: Number }], 
+    width: Number, 
+    length: Number, 
+    recycle: String, 
     performanceFeatures: [{ type: String }],
-    altRef: String,       // Alternative Reference
-    maxWeight: Number,    // Maximum Weight
-    color: String,        // Color(s)
-    material: String      // Material
+    altRef: String,       
+    maxWeight: Number,    
+    color: String,        
+    material: String      
 }, { timestamps: true });
 
 

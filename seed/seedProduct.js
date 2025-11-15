@@ -6,15 +6,12 @@ const Product = require('../models/Product');
 
 const seedProducts = async () => {
     try {
-        // Kết nối DB
         await connectDB();
         console.log("Connected to MongoDB!");
 
-        // Xóa toàn bộ Product cũ
         await Product.deleteMany({});
         console.log("Old products cleared!");
 
-        // Tạo sản phẩm với các field filter + Performance Features + Product Information
         const products = [
             {
                 prodName: "Food Wrap",
@@ -33,9 +30,9 @@ const seedProducts = async () => {
                     "/images/website/product-list_8.png",
                 ],
                 quantity: 120,
-                typeOf: [3, 5],   // Food Storage + Knife – Case – Storage Box
-                width: 30,        // cm
-                length: 300,      // cm
+                typeOf: [3, 5],   
+                width: 30,        
+                length: 300,      
                 recycle: "Yes",
                 performanceFeatures: [
                     "Transparent and flexible",
@@ -68,7 +65,7 @@ const seedProducts = async () => {
                     "/images/website/product-list_9.png",
                 ],
                 quantity: 80,
-                typeOf: [4, 6],   // Trash Bags + Containers
+                typeOf: [4, 6],   
                 width: 90,
                 length: 120,
                 recycle: "No",

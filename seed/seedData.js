@@ -10,9 +10,7 @@ const LOREM = "Lorem Ipsum is simply dummy text of the printing and typesetting 
 const seedData = async () => {
     await connectDB();
 
-    // Xóa dữ liệu cũ
     await Category.deleteMany({});
-    await Product.deleteMany({});
 
     // --- SUSTAINABLE PRODUCTS ---
     const sustainable = await Category.create({
@@ -38,7 +36,7 @@ const seedData = async () => {
         image: `/images/website/image_box_2.png`
     });
 
-    // --- Consumer Goods ---
+   
     const consumerGoods = await Category.create({
         categoryName: 'Consumer Goods',
         link: 'consumer-goods',
@@ -56,7 +54,6 @@ const seedData = async () => {
             image: `/images/website/consummer_${i + 1}.png`
         });
     }
-    // --- Packaging 
     const packaging = await Category.create({
         categoryName: 'Packaging',
         link: 'packaging',
@@ -73,7 +70,6 @@ const seedData = async () => {
             image: `/images/website/Packaging_${i + 1}.png`
         });
     }
-    // --- Engineering Plastics ---
     const engineeringPlastics = await Category.create({
         categoryName: 'Engineering Plastics',
         link: 'engineering-plastics',
@@ -92,7 +88,6 @@ const seedData = async () => {
         });
     }
 
-    // --- Building Materials ---
     const buildingMaterials = await Category.create({
         categoryName: 'Building Materials',
         link: 'building-materials',
@@ -111,7 +106,6 @@ const seedData = async () => {
         });
     }
 
-    // --- Raw Materials ---
     const rawMaterials = await Category.create({
         categoryName: 'Raw Materials',
         link: 'raw-materials',
