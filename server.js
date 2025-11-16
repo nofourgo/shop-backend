@@ -18,9 +18,9 @@ app.get("/", (req, res) => {
 app.use('/Category', categoryRoutes);
 app.use('/Product', productRoutes);
 
-
 // Connect MongoDB
 connectDB();
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// ❌ KHÔNG app.listen()
+// export ra để serverless function dùng
+module.exports = app;
