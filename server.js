@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 });
 app.use('/Category', categoryRoutes);
 app.use('/Product', productRoutes);
+console.log("MONGODB_URI =", process.env.MONGODB_URI);
 
 // Connect MongoDB
 connectDB();
