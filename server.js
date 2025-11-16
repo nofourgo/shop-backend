@@ -13,7 +13,7 @@ const productRoutes = require('./routes/product');
 app.use("/TypeOf", require("./routes/typeOf"));
 
 app.get("/", (req, res) => {
-    res.json({ message: process.env.MONGODB_URI });
+    res.json({ message: process.env.MONGO_URI });
 });
 app.use('/Category', categoryRoutes);
 app.use('/Product', productRoutes);
