@@ -13,11 +13,11 @@ const productRoutes = require('./routes/product');
 app.use("/TypeOf", require("./routes/typeOf"));
 
 app.get("/", (req, res) => {
-    res.json({ message: "Express running on Vercel!" });
+    res.json({ message: process.env.MONGODB_URI });
 });
 app.use('/Category', categoryRoutes);
 app.use('/Product', productRoutes);
-console.log("MONGODB_URI =", process.env.MONGODB_URI);
+console.log("MONGODB_URI =", );
 
 // Connect MongoDB
 connectDB();
