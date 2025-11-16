@@ -12,7 +12,9 @@ const categoryRoutes = require('./routes/category');
 const productRoutes = require('./routes/product');
 app.use("/TypeOf", require("./routes/typeOf"));
 
-
+app.get("/", (req, res) => {
+    res.json({ message: "Express running on Vercel!" });
+});
 app.use('/Category', categoryRoutes);
 app.use('/Product', productRoutes);
 
